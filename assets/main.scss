@@ -139,6 +139,10 @@ body {
   }
 
   & tr {
+    & td:not(:first-child) {
+      text-align: right;
+    }
+
     &:hover {
       background: #d5d5d5;
 

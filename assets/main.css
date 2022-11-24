@@ -124,6 +124,9 @@ body {
   visibility: hidden;
   opacity: 0;
 }
+.receipt-table tr td:not(:first-child) {
+  text-align: right;
+}
 .receipt-table tr:hover {
   background: #d5d5d5;
 }

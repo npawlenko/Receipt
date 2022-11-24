@@ -102,12 +102,11 @@ function receiptChanged() {
 
 function dragStart(e) {
     let element = e.target;
-    while(true) {
-        if(typeof element?.tagName !== "undefined" && element?.tagName === "TR") {
+    while (true) {
+        if (typeof element?.tagName !== "undefined" && element?.tagName === "TR") {
             break;
-        }
-        else {
-            if(typeof element?.parentElement !== "undefined")
+        } else {
+            if (typeof element?.parentElement !== "undefined")
                 element = element.parentElement;
             else
                 return;
@@ -216,6 +215,11 @@ document.getElementById("add-item").onsubmit = (e) => {
     e.preventDefault();
 
     const data = new FormData(e.target);
+    if (!(data.get("name")
+        && data.get("unitPrice")
+        && data.get("quanity"))
+    ) return;
+
     const position = {
         name: data.get("name"),
         unitPrice: data.get("unitPrice"),
@@ -232,6 +236,11 @@ document.getElementById("edit-item").onsubmit = (e) => {
     e.preventDefault();
 
     const data = new FormData(e.target);
+    if (!(data.get("name")
+        && data.get("unitPrice")
+        && data.get("quanity"))
+    ) return;
+
     const position = {
         name: data.get("name"),
         unitPrice: data.get("unitPrice"),
@@ -247,10 +256,6 @@ document.getElementById("edit-item").onsubmit = (e) => {
 
 // zamkniecie wyskakujacego okienka
 document.getElementById("popup").onclick = (e) => e.target.classList.remove("visible");
-
-
-
-
 
 
 // inicjalizacja

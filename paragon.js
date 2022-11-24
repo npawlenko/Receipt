@@ -160,7 +160,7 @@ function buildReceiptPosition(position) {
     const taxRateTd = document.createElement("td");
     taxRateTd.innerText = "D";
     const quanityAndUnitPriceTd = document.createElement("td");
-    quanityAndUnitPriceTd.innerText = `${position.quanity} x ${position.unitPrice}`;
+    quanityAndUnitPriceTd.innerText = `${position.quanity} x ${normalizePrice(position.unitPrice)}`;
     const priceTd = document.createElement("td");
     priceTd.innerText = "" + normalizePrice(position.unitPrice * position.quanity) + "D";
 

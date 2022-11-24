@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Paragon</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/main.css">
+</head>
+<body>
+
+<div id="popup">
+    <div class="popup-wrapper">
+        <h3 class="text-center">EDYTUJ POZYCJĘ</h3>
+        <form id="edit-item">
+            <input type="hidden" id="editIndex" name="index">
+            <input name="name" id="nameEdit" type="text" placeholder="Nazwa">
+            <input name="quanity" id="quanityEdit" type="number" step="0.01" placeholder="Ilość">
+            <input name="unitPrice" id="unitPriceEdit" type="number" step="0.01" placeholder="Cena">
+            <button class="submit-button" type="submit">Edytuj</button>
+        </form>
+    </div>
+</div>
+
+<div class="wrapper">
+    <p>
+        Najedź kursorem na pozycję i kliknij przycisk aby ją edytować albo usunąć.<br/><br/>
+        Zmieniaj pozycje produktów przeciągając je w odpowiednie miejsce.
+    </p>
+
+    <div class="receipt" style="margin-bottom: 40px;">
+        <div class="text-center">
+            <img class="receipt-store-logo" src="assets/img/biedronka.png" alt="Biedronka">
+            <p>
+                Sklep 2757 ul. I. J. Paderewskiego 10B, 15-746 Białystok<br/>
+                Jeronimo Martins Polska S.A.<br/>
+                ul. Żniwna 5, 62-025 Kostrzyn<br/>
+                NIP 779-10-11-327
+            </p>
+        </div>
+        <p class="receipt-date" id="date">
+            2022-11-23 21:11
+        </p>
+
+        <div class="border-dotted">
+            <h4 class="text-center">PARAGON FISKALNY</h4>
+            <table class="receipt-table" id="receipt">
+                <tbody>
+                <tr draggable="true">
+                    <td>WafRurkiCukRóż280g</td>
+                    <td>D</td>
+                    <td>1 x 3,99</td>
+                    <td>3,99D</td>
+                </tr>
+                <tr draggable="true">
+                    <td>ChipsChilSerCb170g</td>
+                    <td>D</td>
+                    <td>1 x 3,99</td>
+                    <td>3,99D</td>
+                </tr>
+                <tr draggable="true">
+                    <td>RożekMarlTruska150ml</td>
+                    <td>D</td>
+                    <td>1 x 3,49</td>
+                    <td>3,49D</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="overflow-hidden">
+            <div class="float-start">
+                <p class="mb-0 mt-0">
+                    Sprzedaż opodatkowana D<br/>
+                    PTU D 0%
+                </p>
+                <h2 class="float-start mb-0">SUMA PLN</h2>
+            </div>
+
+            <div class="float-end">
+                <p class="mb-0 mt-0">
+                    <span class="receipt-total">11,47</span><br/>
+                    0.00
+                </p>
+
+                <h2 class="receipt-total float-end mb-0">11,47</h2>
+            </div>
+        </div>
+    </div>
+
+
+    <h3 class="text-center">DODAJ POZYCJĘ</h3>
+    <form id="add-item">
+        <input name="name" type="text" placeholder="Nazwa">
+        <input name="quanity" type="number" step="0.01" placeholder="Ilość">
+        <input name="unitPrice" type="number" step="0.01" placeholder="Cena">
+        <button class="submit-button" type="submit">Dodaj</button>
+    </form>
+</div>
+
+<script src="paragon.js"></script>
+
+</body>
+</html>

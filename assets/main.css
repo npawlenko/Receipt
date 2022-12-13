@@ -78,7 +78,7 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  max-width: 450px;
+  max-width: 550px;
   width: 100%;
 }
 
@@ -105,12 +105,18 @@ body {
 }
 
 .receipt-table {
+  table-layout: fixed;
   border-collapse: collapse;
   width: 100%;
   white-space: nowrap;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
+}
+.receipt-table td {
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
 }
 .receipt-table tr, .receipt-table td, .receipt-table th {
   border-collapse: collapse;
